@@ -1,0 +1,674 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff5e1;
+  color: #333;
+  overflow-x: hidden;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .intro button {
+    background: #5a3e36;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+
+.intro-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInDown 1s ease-out;
+}
+
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: url('https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(55, 55, 55, 0.6);
+  z-index: 1;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.story,
+.location,
+.rsvp {
+  text-align: center;
+}
+
+.gallery-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center; /* ⬅ ini yang bikin gambar auto di tengah */
+  gap: 1px;
+  margin-top: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0px; /* opsional, biar lebih soft */
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* tetap 2 kolom di mobile */
+  }
+}
+
+
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #5a3e36;
+  color: #fff;
+}
+
+.countdown {
+  background-color: #fff0e6;
+  color: #5a3e36;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.countdown p:first-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #cc9966;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.countdown p:nth-child(2) {
+  font-size: 2.5rem;
+  font-family: 'Great Vibes', cursive;
+  color: #b35f30;
+  margin-bottom: 0.5rem;
+}
+
+.countdown p:nth-child(3) {
+  font-size: 1.1rem;
+  color: #6f4e37;
+  margin-bottom: 2rem;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  /* Default 4 columns */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 600px) {
+  #timer {
+    grid-template-columns: repeat(4, 1fr);
+    /* 2 kolom di mobile */
+  }
+}
+
+
+
+
+.timer-box {
+  background-color: #fff;
+  border: 2px solid #5a3e36;
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 80px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timer-box span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.timer-label {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.3rem;
+}
+
+.hero-invite {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?wedding,couple') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.thankyou {
+  position: relative;
+  background: url('https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  height: auto;
+  padding: 4rem 2rem;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+
+.thankyou-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Overlay gelap */
+  padding: 4rem 2rem;
+  border-radius: 10px;
+}
+
+.thankyou-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.thankyou h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.thankyou p {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  color: #f9f9f9;
+}
+
+
+.pengantin-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pengantin-item {
+  text-align: center;
+  max-width: 450px;
+}
+
+.pengantin-item img {
+  width: 300px;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 12px;
+  /* kotak dengan sudut sedikit melengkung */
+  border: 3px solid #5a3e36;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pengantin-item h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #5a3e36;
+}
+
+.pengantin-item p {
+  font-size: 0.95rem;
+  color: #6f4e37;
+}
+
+#heroInvite {
+  transition: background-image 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.attendance-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.attendance-options-clean {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.attendance-options-clean label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.attendance-options-clean input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #5a3e36;
+  /* untuk warna radio di browser modern */
+}
+
+
+
+button {
+  background-color: #5a3e36;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a3e36;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+/* Styling untuk daftar ucapan */
+.daftarUcapan {
+  margin-top: 2rem;
+  text-align: left;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .daftarUcapan table {
+    font-size: 0.9rem;
+    min-width: 600px; /* supaya tidak terlalu sempit */
+  }
+  .daftarUcapan th,
+  .daftarUcapan td {
+    padding: 10px 12px;
+  }
+}
+
+
+.daftarUcapan table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.daftarUcapan th,
+.daftarUcapan td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #5a3e36;
+}
+
+.daftarUcapan th {
+  background-color: #5a3e36;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.daftarUcapan tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.daftarUcapan tr:hover {
+  background-color: #fff3cd;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.daftarUcapan td {
+  border: 1px solid #f1e1b3;
+  border-radius: 5px;
+}
+
+.daftarUcapan tr:first-child {
+  border-top: none;
+}
+
+.daftarUcapan td:first-child {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .daftarUcapan table {
+    font-size: 0.9rem;
+  }
+
+  .daftarUcapan th,
+  .daftarUcapan td {
+    padding: 10px 12px;
+  }
+}
+
+.intro {
+  background-image: url('https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* biar teks terlihat jelas */
+  text-align: center;
+  position: relative;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* efek gelap */
+  z-index: 1;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+#heroBg {
+  transition: background-image 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+form {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+h2 {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 1px;
+  color: #374151;
+  font-weight: 600;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #3b82f6;
+  outline: none;
+  background-color: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #5a3e36;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a3e36;
+}
+
+#response {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #10b981;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}

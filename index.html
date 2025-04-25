@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <audio id="weddingAudio" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="intro" id="intro">
+    <div class="intro-content">
+      <h1>Undangan Pernikahan</h1>
+      <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+      <p><span id="tamu" style="font-weight: bold;">Tamu Undangan</span></p>
+      <br>
+      <button onclick="mulaiUndangan()" class="pulse text-white bg-pink-600 px-6 py-3 rounded-full mt-8">Buka
+        Undangan</button>
+    </div>
+  </div>
+
+  <!-- Hero Section - Undangan Pernikahan -->
+  <div id="heroInvite" class="hero-container">
+    <div id="heroBg" class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Dewa & Ayu</h1>
+      <p>We invited you to celebrate our wedding</p>
+      <p>30 Mei 2025</p>
+    </div>
+  </div>
+  </section>
+  <!-- Kata Pengantar -->
+  <section class="story">
+    <h2 data-aos="fade-down" data-aos-duration="1000">Om Swastyastu</h2>
+    <p data-aos="fade-down" data-aos-duration="1000">Dengan segala kerendahan hati dan limpahan kasih sayang Tuhan, kami mengundang Bapak/Ibu/Saudara/i untuk hadir
+      dan memberikan doa restu dalam acara pernikahan kami.</p>
+    <!-- </section> -->
+
+    <!-- Perkenalan Pengantin -->
+    <!-- <section class="story"> -->
+    <div class="pengantin-container">
+      <div class="pengantin-item" data-aos="fade-right" data-aos-duration="1000">
+        <img src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg" alt="Mempelai Pria">
+        <h3>I Made Dewa Putra</h3>
+        <p>Anak pertama dari pasangan</p>
+        <p>Bapak Ketut</p>
+        <p>&</p>
+        <p>Ibu Wayan</p>
+        <p>Br.Batanancak, Mas Ubud</p>
+      </div>
+      <div class="pengantin-item" data-aos="fade-left" data-aos-duration="1000">
+        <img src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg" alt="Mempelai Wanita">
+        <h3>Ni Komang Ayu Lestari</h3>
+        <p>Anak kedua dari pasangan</p>
+        <p>Bapak Made</p>
+        <p>&</p>
+        <p>Ibu Desak</p>
+        <p>Br.Batanancak, Mas Ubud</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="gallery-section">
+    <h2 data-aos="fade-up" data-aos-duration="1000">Galeri Kenangan</h2>
+    <div class="gallery">
+      <img data-aos="fade-right" data-aos-duration="1000"src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-left" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-right" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-left" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-right" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-left" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-right" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-left" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-right" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-left" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-right" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+      <img data-aos="fade-left" data-aos-duration="1000" src="https://tudearjaya.github.io/assets/img/portfolio/dekari.jpeg">
+    </div>
+  </section>
+
+  <div id="main" style="display:none">
+    <section data-aos="fade-up" data-aos-duration="1000" class="countdown" class="py-16 animasi-scroll">
+      <p>Our Special</p>
+      <p>Wedding Event</p>
+      <p>Friday, 30 Mei, 2025</p>
+      <div id="timer">
+        <div class="timer-box">
+          <span id="days">00</span>
+          <div class="timer-label">Hari</div>
+        </div>
+        <div class="timer-box">
+          <span id="hours">00</span>
+          <div class="timer-label">Jam</div>
+        </div>
+        <div class="timer-box">
+          <span id="minutes">00</span>
+          <div class="timer-label">Menit</div>
+        </div>
+        <div class="timer-box">
+          <span id="seconds">00</span>
+          <div class="timer-label">Detik</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="location" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Lokasi Acara</h2>
+    <p>Jln Raya Mas Ubud No.136, Bali</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.571848142407!2d115.26997047456618!3d-8.540878986564923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d8df18b65b7%3A0x383a3b13a55c9275!2sJl.%20Raya%20Mas%20No.136%2C%20MAS%2C%20Kecamatan%20Ubud%2C%20Kabupaten%20Gianyar%2C%20Bali%2080571!5e0!3m2!1sid!2sid!4v1744763656522!5m2!1sid!2sid"></iframe>
+  </section>
+
+  <center>
+    <section>
+      <h2 data-aos="fade-up" data-aos-duration="1000">Form Kehadiran</h2>
+      <form id="myForm" data-aos="fade-up" data-aos-duration="1000">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" placeholder="Masukkan Nama Anda" required><br><br>
+
+        <label>Ucapan:</label><br>
+        <textarea name="ucapan" placeholder="Ucapan dan doa kepada Pengantin" required></textarea><br><br>
+
+        <label>Kehadiran:</label><br>
+        <select name="kehadiran" required>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+        </select><br><br>
+
+        <button type="submit" id="submitBtn">
+          <span class="btn-text">Kirim</span>
+          <span class="spinner" style="display: none;"></span>
+        </button>
+
+      </form>
+
+      <p id="response"></p>
+
+      <h2 data-aos="fade-up" data-aos-duration="1000">Daftar Ucapan</h2>
+      <div class="table-responsive" data-aos="fade-up" data-aos-duration="1000">
+        <table class="daftarUcapan" id="data-table" border="0">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Ucapan</th>
+              <th>Kehadiran</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+
+
+    </section>
+  </center>
+
+  <section class="thankyou" data-aos="fade-up" data-aos-duration="1000">
+    <div class="thankyou-overlay">
+      <div class="thankyou-content">
+        <h2>Terima Kasih</h2>
+        <p>Atas kehadiran dan doa restunya, kami mengucapkan terima kasih yang sebesar-besarnya.</p>
+        <p>Semoga cinta dan kebahagiaan senantiasa menyertai kita semua.</p>
+        <p>Salam hangat,</p>
+        <p><strong>I Made Dewa Putra & <br> Ni Komang Ayu Lestari</strong></p>
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("myForm");
+      const tableBody = document.querySelector("#data-table tbody");
+      const submitBtn = document.getElementById("submitBtn");
+      const spinner = submitBtn.querySelector(".spinner");
+      const btnText = submitBtn.querySelector(".btn-text");
+
+      const appendToTable = (data) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+      <td>${data.nama}</td>
+      <td>${data.ucapan}</td>
+      <td>${data.kehadiran}</td>
+    `;
+        tableBody.appendChild(tr);
+      };
+
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Show loading spinner
+          submitBtn.disabled = true;
+          btnText.style.display = "none";
+          spinner.style.display = "inline-block";
+
+          const data = {
+            nama: form.nama.value,
+            ucapan: form.ucapan.value,
+            kehadiran: form.kehadiran.value
+          };
+
+          fetch("https://script.google.com/macros/s/AKfycbw65Dz4Kpp3GyGVb4Bpl_Akj2gFAZ5TdhOcFK5LzauHl2t1kK2KaNBWbdJgBkOr7OXj/exec", {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify(data),
+            headers: {
+              "Content-Type": "application/json"
+            }
+          })
+            .then(() => {
+              document.getElementById("response").innerText = "Terima kasih! Data berhasil dikirim.";
+              appendToTable(data);
+              form.reset();
+            })
+            .catch(() => {
+              document.getElementById("response").innerText = "Gagal mengirim data.";
+            })
+            .finally(() => {
+              // Hide spinner, enable button
+              submitBtn.disabled = false;
+              btnText.style.display = "inline";
+              spinner.style.display = "none";
+            });
+        });
+      }
+
+      // Load existing data
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbw65Dz4Kpp3GyGVb4Bpl_Akj2gFAZ5TdhOcFK5LzauHl2t1kK2KaNBWbdJgBkOr7OXj/exec';
+
+      fetch(scriptURL)
+        .then(res => res.json())
+        .then(data => {
+          data.forEach(row => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+          <td>${row.Nama || ''}</td>
+          <td>${row.Ucapan || ''}</td>
+          <td>${row.Kehadiran || ''}</td>
+        `;
+            tableBody.appendChild(tr);
+          });
+        })
+        .catch(err => console.error('Error:', err));
+    });
+
+    AOS.init();
+
+  </script>
+
+</body>
+
+</html>
+
+<!-- https://script.google.com/macros/s/AKfycbw65Dz4Kpp3GyGVb4Bpl_Akj2gFAZ5TdhOcFK5LzauHl2t1kK2KaNBWbdJgBkOr7OXj/exec -->
