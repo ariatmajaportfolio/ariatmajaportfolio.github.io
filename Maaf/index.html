@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ntap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Background animasi gradient */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Kontainer */
+    .container {
+      text-align: center;
+      color: white;
+      animation: fadeIn 2s ease forwards, bounce 2s ease forwards;
+      opacity: 0;
+    }
+
+    /* Animasi teks masuk */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-30px); }
+      60% { transform: translateY(-15px); }
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+
+    /* Tombol */
+    .btn {
+      padding: 15px 30px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #fff;
+      background-color: rgba(0,0,0,0.3);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .btn:hover {
+      background-color: rgba(0,0,0,0.6);
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>SORRY NDY</h1>
+    <p>GALUNGAN GELEM, KUNINGAN GAS?, JAM 6 NE DE JAM 4</p>
+    <button class="btn" onclick="thankYou()">GAS?</button>
+  </div>
+
+  <script>
+    function thankYou() {
+      document.querySelector('.container').innerHTML = `
+        <h1>NTAP!</h1>
+      `;
+    }
+  </script>
+
+</body>
+</html>
